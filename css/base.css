@@ -1,0 +1,27 @@
+*{box-sizing:border-box}
+body{margin:0;font:16px -apple-system,"SF Pro Display",Segoe UI,Roboto,sans-serif;color:var(--fg);min-height:100vh;
+background:radial-gradient(circle at 15% 20%,#ff6bd6 0,transparent 40%),radial-gradient(circle at 85% 15%,#4facfe 0,transparent 40%),radial-gradient(circle at 70% 85%,#43e97b 0,transparent 40%),radial-gradient(circle at 10% 90%,#fa709a 0,transparent 40%),#1b1b3a;background-attachment:fixed}
+:root{--fg:#fff}
+:root.light{--fg:#111}
+:root.light body{background-color:#eef}
+.app{display:grid;grid-template-columns:220px 1fr;gap:16px;padding:16px;min-height:100vh}
+nav{display:flex;flex-direction:column;gap:6px;padding:12px;height:calc(100vh - 32px);position:sticky;top:16px}
+nav a{display:flex;gap:10px;padding:10px 14px;border-radius:16px;color:inherit;text-decoration:none}
+nav a.on{background:var(--accent);color:#fff}
+main{padding:8px 4px;max-width:900px}
+h1{margin:4px 0 16px}
+.pad{padding:18px;margin-bottom:14px}
+.row{display:flex;gap:8px;padding:10px;margin-bottom:12px}
+.item{display:flex;align-items:center;gap:12px;padding:12px 16px;margin-bottom:8px}
+.item span{flex:1;white-space:pre-wrap}
+.item.done span{text-decoration:line-through;opacity:.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.stat{text-align:center}.stat b{display:block;font-size:30px}
+input,textarea,button,.btn{font:inherit;color:inherit;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);border-radius:14px;padding:8px 12px}
+input[type=text],input:not([type]),textarea{flex:1;min-width:0}
+button,.btn{cursor:pointer;background:var(--accent);color:#fff;border:0;display:inline-block;margin:2px}
+.del{background:transparent;color:inherit;opacity:.6}
+label{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 0}
+@media(max-width:700px){.app{grid-template-columns:1fr;padding-bottom:90px}
+nav{flex-direction:row;position:fixed;bottom:10px;left:10px;right:10px;height:auto;top:auto;z-index:5;justify-content:space-around}
+nav a span{display:none}}
